@@ -15,14 +15,16 @@ module.exports = function(app) {
 			"participants": data.participants,
 			"eventDay": data.eventDay
 		};
-		console.log("data: " + JSON.stringify(data));
+		console.log("data in routes file: " + JSON.stringify(data));
 		var _event = new Event(surveyObj);
-		_event.save(data, function(err, doc) {
+		_event.save(function(err, doc) {
 			if (err) {
 				console.log('Error saving event');
 				console.log(err);
+				res.jsonp(err);
 			} else {
 				console.log('Saved Event');
+				res.jsonp(doc);
 			}
 		});
 	});

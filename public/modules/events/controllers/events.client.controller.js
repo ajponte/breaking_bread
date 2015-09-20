@@ -4,6 +4,7 @@ angular.module('events').controller('EventsController', ['$scope', '$http',
 	function($scope, $http) {
 		// Controller Logic
 		// 
+		 $scope.testa = true;
 		$scope.createEvent = function() {
 			var participants = $scope.participants.split(",");
 			var eventData = {
@@ -12,18 +13,53 @@ angular.module('events').controller('EventsController', ['$scope', '$http',
 				"eventDay" : $scope.eventDay,
 				"theme" : $scope.theme,
 				"dish" : $scope.dish,
-				"maxNumMebers" : $scope.maxNumMebers,
+				"maxNumMembers" : $scope.maxNumMembers,
 				"participants" : participants
+
 			};
+
+
+
+
+
 			console.log("eventData: " + JSON.stringify(eventData));
-			$scope.respone = '';
-			$http.post('/api/events/submitEvent', eventData).then(function(res) {
+			$scope.response = '';
+
+			$http.post('/api/events/submitEvent', eventData).then(function(res) 
+			{
 				$scope.response = res;
-			}, function(err) {
+				//clear data
+				//console.log(JSON.stringify(res)+"Stuff");
+
+				}, 
+				function(err) {
 				if (err) {
 					console.log("could not POST event data");
 				}
+				console.log("post has ended");
+				
 			});
+				$scope.eventName='';
+				$scope.location='';
+				$scope.eventDay='';
+				$scope.theme='';	
+				$scope.dish='';
+				$scope.maxNumMembers=0;
+				$scope.participants='';
+
+			//$scope.remove='';
+			 /*
+				$http.post('/someUrl', {msg:'hello word!'}).
+					  then(function(response) {
+					    // this callback will be called asynchronously
+					    // when the response is available
+					  }, function(response) {
+					    // called asynchronously if an error occurs
+					    // or server returns response with an error status.
+					  });
+			 */
+
+			
 		};
 	}
 ]);
