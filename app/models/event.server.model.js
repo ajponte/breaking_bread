@@ -27,6 +27,11 @@ var EventSchema = new Schema({
 	eventType: {
 		type: String,
 		required: 'Event Type is required'
+	},
+
+	participants: {
+		/** The array will be of references to users. */
+		type: Array
 	}
 });
 

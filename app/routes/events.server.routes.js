@@ -22,7 +22,7 @@ module.exports = function(app) {
 	 */
 	app.post('/api/events/getEventsForUser', function(req, res) {
 		var data = req.body;
-		Event.find({"user", data.user}, function(err, doc) {
+		Event.find({"user": data.user}, function(err, doc) {
 			if (err) {
 				console.log("error getting event.");
 			} else {
