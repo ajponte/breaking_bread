@@ -4,13 +4,23 @@ var Event = mongoose.model('Event');
 var User = mongoose.model('User');
 
 module.exports = function(app) {
-	app.post('api/events/submitEvent', function(req, res) {
+	app.post('/api/events/submitEvent', function(req, res) {
 		var data = req.body;
-		var surveyObj = {};
+		var surveyObj = {
+			"location" : data.location,
+			"name" : data.eventName,
+			"theme": data.theme,
+			"dish": data.dish,
+			"maxNumMebers": data.maxNumMebers,
+			"participants": data.participants,
+			"eventDay": data.eventDay
+		};
+		console.log("data: " + JSON.stringify(data));
 		var _event = new Event(surveyObj);
 		_event.save(data, function(err, doc) {
 			if (err) {
 				console.log('Error saving event');
+				console.log(err);
 			} else {
 				console.log('Saved Event');
 			}

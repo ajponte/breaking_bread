@@ -9,5 +9,10 @@ angular.module('events').config(['$stateProvider',
 			url: '/events',
 			templateUrl: 'modules/events/views/events.client.view.html'
 		});
+		$stateProvider.
+		state('createevents', {
+			url: '/createevents',
+			templateUrl: 'modules/events/views/events.client.create.html'
+		});
 	}
 ]);
