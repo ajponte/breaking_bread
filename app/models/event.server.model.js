@@ -26,13 +26,33 @@ var EventSchema = new Schema({
 
 	eventType: {
 		type: String,
-		required: 'Event Type is required'
+		default: 'potluck',
+		//required: 'Event Type is required'
 	},
 
 	participants: {
 		/** The array will be of references to users. */
 		type: Array
+	},
+	eventDay: {
+		
+		type: Date
+	},
+	theme: {
+		
+		type: String
+	},
+	maxNumMembers: {
+		type: Number
+	},
+	eventRating:{
+		default: 0,
+		type: Number
+	},
+	dish : {
+		type: String
 	}
+
 });
 
 mongoose.model('Event', EventSchema);
