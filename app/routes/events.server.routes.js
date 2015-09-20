@@ -2,6 +2,7 @@
 var mongoose = require('mongoose');
 var Event = mongoose.model('Event');
 var User = mongoose.model('User');
+var FeedEntry = mongoose.model('FeedEntry');
 
 module.exports = function(app) {
 	app.post('/api/events/submitEvent', function(req, res) {
@@ -22,6 +23,14 @@ module.exports = function(app) {
 				console.log('Error saving event');
 				console.log(err);
 			} else {
+				FeedEntry.save({"eventEntry": doc._id}, function(err, docs) {
+					if (err) {
+						console.log('Error saving event to feed.');
+						console.log(err);
+					} else {
+						console.log('Saved event to feed')
+					}
+				});
 				console.log('Saved Event');
 			}
 		});
