@@ -1,15 +1,140 @@
-.content {
-	margin-top: 50px;
+/** 
+* core.css
+* @author Karlina Beringer
+* @description overall template for the Breaking Bread app.
+*/
+
+@import "bourbon";
+
+/** Stylize the navigation bar at the top of the page */
+.navbar {
+  	background: #35721b;
+ 	background: rgba(53, 114, 27, 0.85);
+ 	box-shadow: none;
+ 	border: none;
+ 	vertical-align: center;
+ 	font-family: "Trebuchet MS", Helvetica, sans-serif;
+ 	padding-left: 1em;
+ 	padding-right: 1em;
 }
-.undecorated-link:hover {
+.navbar .navbar-brand {
+	color: white;
+	font-size: 24pt;
+}
+.navbar .navbar-brand:hover {
+	color: #ffb715;
+}
+.navbar .nav > li > a {
+	color: white;
+	font-size: 14pt;
+}
+.navbar .nav > li > a:hover {
+	color: #ffb715;
+}
+.navbar .navbar-toggle, 
+.navbar .navbar-toggle:focus {
+  border: 2px solid white;
+  background: none;
+}
+.navbar .navbar-toggle:hover {
+  border: 2px solid #ffb715;
+  background: none;
+}
+.navbar .navbar-toggle:hover .icon-bar {
+	background: #ffb715;
+}
+.navbar .navbar-toggle .icon-bar {
+	background: white;
+	padding-top: 1px;
+	height: 3px;
+}
+@media screen and (max-width: 768px) {
+  .navbar-inverse .navbar-collapse {
+    box-shadow: none;
+    border-top: 2px solid white;
+  }
+}
+
+/** Stylize the footer at the bottom of the page */
+.footer {
+  	background: #35721b;
+ 	background: rgba(53, 114, 27, 0.85);
+ 	box-shadow: none;
+ 	border: none;
+ 	vertical-align: center;
+ 	font-family: "Trebuchet MS", Helvetica, sans-serif;
+ 	font-size: 14px;
+ 	text-align: center;
+ 	color: white;
+ 	padding: 1em;
+}
+#footer-link {
+	color: #422100;
+	font-weight: bold;
 	text-decoration: none;
 }
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-	display: none !important;
+#footer-link:hover,
+#footer-link:focus {
+	color: #ffb715;
+	font-weight: bold;
 }
-.ng-invalid.ng-dirty{
-    border-color:#FA787E;
+
+/** Control the body fonts */
+p, small {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	color: #523b4d;
 }
-.ng-valid.ng-dirty{
-    border-color:#78FA89;
+h1, h2, h3 {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	color: #422100;
 }
+a, 
+a:visited,
+a:focus,
+a:active,
+a:hover {
+  color: #ff8013;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+/** Login page */
+.welcome {
+	padding: 1em;
+	background: #ff8013;
+	color: #422100
+}
+
+/** Paralax effect (scrolling past background image) */
+.container {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+/** Form elements */
+.btn {
+	background: #ff5c54;
+	border: none;
+}
+.btn:hover,
+.btn:focus {
+	background: #ff8013;
+	border: none;
+}
+
+/** Media */
+hr {
+  background-color: #ff8013;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ff8013;
+}
+.img-responsive {
+  width: 100%;
+}
+
+
+
+
