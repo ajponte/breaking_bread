@@ -1,0 +1,49 @@
+<style>
+	.center
+	{
+
+		position: center;
+	}
+</style>
+<br>
+<br>
+<br>
+<div class="col-med-12">
+	<section class="container center" data-ng-controller="EventsController">	
+		<div class="col-md-4">
+			<form ng-submit="createEvent()" novalidate>
+				<div class="row">
+		    	Whats the Event Name?<br>
+		    	<input class="form-control" type="text" ng-model="eventName"><br>
+		    </div>
+		    <div class="row">
+		    	Enter the Address for the Event?<br>
+		    	<input class="form-control" type="text" ng-model="location"><br>
+		    </div>
+		    <div class="row">
+		    	What day is the Event?<br>
+		    	<input data-date-format="mm/dd/yy" class="form-control" type="date" ng-model="eventDay"><br>
+		    </div>
+		    <div class="row">
+		    	Whats the Theme for the Potluck?<br>
+		    	<input class="form-control" type="text" ng-model="theme"><br>
+		    </div>
+		    <div class="row">
+		    	 Whats are you trying to make?<br>
+		   		 <input class="form-control" type="text" ng-model="dish">
+		    </div>
+		    <br><br>
+		    <div class="row">
+		    	How many people do you want?<br>
+		    	<input class="form-control" type="number" ng-model="maxNumMembers">
+		    </div>
+		    <div class="row">
+		    	Who is comming to the Event?<br>
+		    	<input class="form-control" type="text" ng-model="participants"><br>
+		    </div>
+		    <br>
+		    <button ng-click="submitevent()">Post</button>
+		  </form>
+		</div>
+	</section>
+</div> 
