@@ -4,8 +4,6 @@
 * @description overall template for the Breaking Bread app.
 */
 
-@import "bourbon";
-
 /** Stylize the navigation bar at the top of the page */
 .navbar {
   	background: #35721b;
@@ -98,6 +96,11 @@ a:hover {
   text-decoration: none;
   font-weight: normal;
 }
+.nameLink {
+	color: #35721b;
+	text-decoration: none;
+	font-weight: normal;
+}
 
 /** Login page */
 .welcome {
@@ -134,6 +137,51 @@ hr {
 .img-responsive {
   width: 100%;
 }
+.user-image {
+  width: 100px;
+  height: 100px;
+  border: 10px solid #ecab18;
+  border-right-color: #1ad280;
+  border-bottom-color: #1ad280;
+  border-radius: 50%;
+  margin-bottom: .5em;
+}
+.scrollBox {
+	padding: 1em;
+	margin-top: 55px;
+	overflow: scroll;
+	max-height: 445px;
+}
+.feed-entry {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; 
+	-khtml-border-radius: 10px;
+	background: rgba(184, 179, 180, 0.85);
+	padding: 1em;
+	margin: 1em;
+}
+.feed-entry:hover {
+	background: #ff5c54;
+	background: rgba(255, 92, 84, 0.85);
+}
+.feed-background {        
+    position:relative;
+    z-index:1;
+    height:500px;
+    width:100%;
+    background-attachment:fixed;    
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    background-image: url("/modules/core/img/content/wood.jpg");
+}
+.grow { 
+	transition: all .2s ease-in-out; 
+}
+.grow:hover { 
+	transform: scale(1.1); 
+}
+
 
 
 
