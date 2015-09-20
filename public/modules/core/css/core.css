@@ -12,6 +12,8 @@
  	border: none;
  	vertical-align: center;
  	font-family: "Trebuchet MS", Helvetica, sans-serif;
+ 	padding-left: 1em;
+ 	padding-right: 1em;
 }
 .navbar .navbar-brand {
 	color: white;
@@ -35,6 +37,9 @@
 .navbar .navbar-toggle:hover {
   border: 2px solid #ffb715;
   background: none;
+}
+.navbar .navbar-toggle:hover .icon-bar {
+	background: #ffb715;
 }
 .navbar .navbar-toggle .icon-bar {
 	background: white;
@@ -92,7 +97,42 @@ a:hover {
   font-weight: normal;
 }
 
+/** Paralax effect (scrolling past background image) */
+.container {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+/*
+section.module.parallax {
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: inherit;
+}
+section.module.parallax-1 {
+  background-image: url("../img/content/home_background.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+*/
+
 /** Form elements */
+.btn {
+	background: #ff5c54;
+	border: none;
+}
+.btn:hover,
+.btn:focus {
+	background: #ff8013;
+	border: none;
+}
 
 /** Media */
 hr {
@@ -102,26 +142,9 @@ hr {
   border-color: #ff8013;
 }
 .img-responsive {
-  width: inherit;
+  width: 100%;
 }
 
-/** Default styles that came with the original MEAN.js skeleton project */
-/*
-.content {
-	margin-top: 50px;
-}
-.undecorated-link:hover {
-	text-decoration: none;
-}
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-	display: none !important;
-}
-.ng-invalid.ng-dirty{
-    border-color:#FA787E;
-}
-.ng-valid.ng-dirty{
-    border-color:#78FA89;
-}
-*/
+
 
 
