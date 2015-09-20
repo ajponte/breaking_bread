@@ -1,10 +1,11 @@
+
 'use strict';
 
 var mongoose = require('mongoose'),
-	Scheme = mongoose.Scheme;
+	Schema = mongoose.Schema;
 
-var FeedEntrySchema = new Scheme({
-	Event: {
+var FeedEntrySchema = new Schema({
+	eventEntry: {
 		type: Schema.ObjectId,
 		ref: 'Event'
 	}
