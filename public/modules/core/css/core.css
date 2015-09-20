@@ -4,6 +4,8 @@
 * @description overall template for the Breaking Bread app.
 */
 
+@import "bourbon";
+
 /** Stylize the navigation bar at the top of the page */
 .navbar {
   	background: #35721b;
@@ -97,31 +99,19 @@ a:hover {
   font-weight: normal;
 }
 
+/** Login page */
+.welcome {
+	padding: 1em;
+	background: #ff8013;
+	color: #422100
+}
+
 /** Paralax effect (scrolling past background image) */
 .container {
 	margin: 0;
 	padding: 0;
 	width: 100%;
 }
-
-/*
-section.module.parallax {
-  	background-repeat: no-repeat;
-  	background-attachment: fixed;
-  	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
-  	width: inherit;
-}
-section.module.parallax-1 {
-  background-image: url("../img/content/home_background.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-*/
 
 /** Form elements */
 .btn {
