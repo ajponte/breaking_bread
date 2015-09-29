@@ -25,18 +25,26 @@ module.exports = function(app) {
 			} else {
 				console.log("DOC: " + JSON.stringify(doc));
 				console.log("DOCID: " + doc._id);
-				var feedEntry = new FeedEntry({'Event': doc._id});
-				feedEntry.save(function(error, docs) {
-					if (error) {
-						console.log('Error saving feed entry');
-					} else {
-						console.log('Saved feed entry');
-					}
-				});
-				console.log('Saved Event');
+				makeFeedEntry({"eventId": doc._id});
 			}
 		});
 	});
+
+	/**
+	 * Creates and saves a Feed Entry object
+	 * in mongo using ENTRYINFO.
+	 */
+	function makeFeedEntry(entryInfo) {
+		var feedEntry = new FeedEntry({'Event': entryInfo._id});
+		feedEntry.save(function(error, docs) {
+			if (error) {
+				console.log('Error saving feed entry');
+			} else {
+				console.log('Saved feed entry');
+			}
+		});
+		console.log('Saved Event');
+	}
 
 	/**
 	 * Returns all events for the user.
