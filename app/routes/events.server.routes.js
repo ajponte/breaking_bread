@@ -25,7 +25,7 @@ module.exports = function(app) {
 			} else {
 				console.log("DOC: " + JSON.stringify(doc));
 				console.log("DOCID: " + doc._id);
-				makeFeedEntry({"eventId": doc._id});
+				makeFeedEntry(doc);
 			}
 		});
 	});
