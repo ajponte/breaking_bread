@@ -27,7 +27,7 @@ html, body {
 	color: #ffb715;
 }
 .navbar .nav > li > a {
-	color: white;
+	color: #330033;
 	font-size: 14pt;
 }
 .navbar .nav > li > a:hover {
@@ -66,7 +66,7 @@ html, body {
  	font-family: "Trebuchet MS", Helvetica, sans-serif;
  	font-size: 14px;
  	text-align: center;
- 	color: white;
+ 	color: #330033;
  	padding: 1em;
 }
 #footer-link {
@@ -76,7 +76,7 @@ html, body {
 }
 #footer-link:hover,
 #footer-link:focus {
-	color: #ffb715;
+	color: #2E64FE;
 	font-weight: bold;
 }
 
@@ -170,11 +170,11 @@ hr {
 .feed-background {        
     position:relative;
     z-index:1;
-    height:500px;
+    height: 100vh;
     width:100%;
     background-attachment:fixed;    
-    background-size:100% 100%;
-    background-repeat:no-repeat;
+    background-size:100%;
+    background-repeat: repeat;
     background-image: url("/modules/core/img/content/wood.jpg");
 }
 .grow { 
@@ -226,8 +226,4 @@ hr {
 	border-radius: 10px; 
 	-khtml-border-radius: 10px;
 }
-
-
-
-
 

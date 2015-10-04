@@ -12,55 +12,31 @@
 				</p>
 			</div><!--.col-md-4-->
 
+
 			<!-- Display friends carousel -->
-			<div class="col-md-8 scrollBox greenPanel">
+			<div class="col-md-8 scrollBox greenPanel" style="padding:1em">
 				<h2>Friends</h2>
   				<div class="row">
-  					<div class="col-md-2">
-  						<img src="/modules/core/img/brand/default_user_image.jpg" class="user_profile_img"/>
-  						<p>Friend</p>
-  					</div>
-  				  
-  				  	<div class="col-md-2">
-  						<img src="/modules/core/img/brand/default_user_image.jpg" class="user_profile_img"/>
-  						<p>Friend</p>
-  					</div>
-
-  					<div class="col-md-2">
-  						<img src="/modules/core/img/brand/default_user_image.jpg" class="user_profile_img"/>
-  						<p>Friend</p>
-  					</div>
-
-  					<div class="col-md-2">
-  						<img src="/modules/core/img/brand/default_user_image.jpg" class="user_profile_img"/>
-  						<p>Friend</p>
-  					</div>
-
-  					<div class="col-md-2">
-  						<img src="/modules/core/img/brand/default_user_image.jpg" class="user_profile_img"/>
-  						<p>Friend</p>
-  					</div>
-
-  					<div class="col-md-2">
-  						<img src="/modules/core/img/brand/default_user_image.jpg" class="user_profile_img"/>
-  						<p>Friend</p>
-  					</div>
-
-  					<div class="col-md-2">
-  						<img src="/modules/core/img/brand/default_user_image.jpg" class="user_profile_img"/>
-  						<p>Friend</p>
-  					</div>
-
-  					<div class="col-md-2">
-  						<img src="/modules/core/img/brand/default_user_image.jpg" class="user_profile_img"/>
-  						<p>Friend</p>
-  					</div>
-
-  					<div class="col-md-2">
-  						<img src="/modules/core/img/brand/default_user_image.jpg" class="user_profile_img"/>
-  						<p>Friend</p>
-  					</div>
-
+  					<!-- ***** The ng-repeat might come in handy later ****
+ 					<ul rn-carousel class="image">
+  						<li ng-repeat="image in friends">
+    						<div class="layer">{{ image }}</div>
+  						</li>
+					</ul>
+					-->
+					<ul rn-carousel class="image">
+  						<li>
+  							<img src="/modules/core/img/brand/default_user_image.jpg" class="user_profile_img"/>
+  						</li>
+  						<li>
+  							<img src="/modules/core/img/brand/default_user_image.jpg" class="user_profile_img"/>
+  						</li>
+  						<li>
+  							<img src="/modules/core/img/brand/default_user_image.jpg" class="user_profile_img"/>
+  						</li>
+					</ul>
+					<div rn-carousel-indicators ng-if="slides.length > 1" slides="slides" rn-carousel-index="carouselIndex">
+					</div>
   				</div>
       		</div>
     	</div>
