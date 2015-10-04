@@ -10,7 +10,6 @@
 <br>
 <div class="col-med-12">
 	<section class="container center" data-ng-controller="EventsController" >	
-		{{testa}}
 		<div class="col-md-4">
 			<form ng-submit="createEvent()" novalidate >
 					<div class="row" >
@@ -44,6 +43,9 @@
 				    </div>
 				    <br>
 				    <button ng-click="submitevent()">Post</button>
+				    <div data-ng-show="submitted">
+				    	<p>Event was successfully submitted</p>
+				    </div>
 			    
 		  </form>
 		</div>
