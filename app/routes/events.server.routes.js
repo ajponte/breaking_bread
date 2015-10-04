@@ -16,12 +16,12 @@ module.exports = function(app) {
 			"participants": data.participants,
 			"eventDay": data.eventDay
 		};
-		console.log("data: " + JSON.stringify(surveyObj));
 		var _event = new Event(surveyObj);
 		_event.save(function(err, doc) {
 			if (err) {
 				console.log('Error saving event');
 				console.log(err);
+				res.jsonp(err);
 			} else {
 				console.log("DOC: " + JSON.stringify(doc));
 				console.log("DOCID: " + doc._id);
