@@ -1,3 +1,32 @@
 <section data-ng-controller="FeedController">
-	This is the Feed view
+
+    <!-- Background image to scroll past -->
+	<section class="container feed-background">
+
+		<!-- Area where feed entries are displayed -->
+		<section class="scrollBox">
+			<h1 style="color:white;padding:.8em;">The Fead</h1>
+			<h3 style="color:white;padding:1em;">Potlucks happening near you!</h3>
+
+			<!-- An individual row in the table of events -->
+			<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+			<div class="row feed-entry grow" ng-repeat="f in feedEntries">
+				<div class="col-md-4" align="center">
+					<img src="{{f.imageURL ? f.imageURL : '/modules/core/img/brand/default_user_image.jpg'}}" class="img-responsive user-image" alt="{{f.user}}">
+				</div>
+				<div class="col-md-8">
+					<p>
+						<a style="color:#35721b;font-weight:bold" href="{{f.profileURL}}">{{f.user}}</a>
+						is bringing <strong>{{f.food}}</strong> to <a style="color:#35721b;font-weight:bold" href="f.eventOwner.profileURL">{{f.eventOwner}}</a>'s event, <a style="color:#35721b;font-weight:bold" href="">{{f.eventName}}</a>.
+					</p>
+					<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      					<div class="panel-body">
+      					Hello there!
+      					</div>
+      				</div>
+				</div>
+			</div><!--.feed-entry-->
+			</a>
+		</section><!--.scrollBox-->
+	</section><!--.feed-background-->
 </section>
