@@ -69,9 +69,4 @@ module.exports = function(app) {
 			}
 		});
 	});
-
-	/** Update the user's profile pic to a new url. */
-	app.post('/api/dashboard/profilePic/update', function(req, res) {
-		//TODO
-	});
 };
