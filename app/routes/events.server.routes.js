@@ -2,6 +2,7 @@
 var mongoose = require('mongoose');
 var Event = mongoose.model('Event');
 var User = mongoose.model('User');
+var FeedEntry = mongoose.model('FeedEntry');
 
 module.exports = function(app) {
 	app.post('/api/events/submitEvent', function(req, res) {
@@ -15,7 +16,6 @@ module.exports = function(app) {
 			"participants": data.participants,
 			"eventDay": data.eventDay
 		};
-		console.log("data in routes file: " + JSON.stringify(data));
 		var _event = new Event(surveyObj);
 		_event.save(function(err, doc) {
 			if (err) {
@@ -23,11 +23,28 @@ module.exports = function(app) {
 				console.log(err);
 				res.jsonp(err);
 			} else {
-				console.log('Saved Event');
-				res.jsonp(doc);
+				console.log("DOC: " + JSON.stringify(doc));
+				console.log("DOCID: " + doc._id);
+				makeFeedEntry(doc);
 			}
 		});
 	});
+
+	/**
+	 * Creates and saves a Feed Entry object
+	 * in mongo using ENTRYINFO.
+	 */
+	function makeFeedEntry(entryInfo) {
+		var feedEntry = new FeedEntry({'Event': entryInfo._id});
+		feedEntry.save(function(error, docs) {
+			if (error) {
+				console.log('Error saving feed entry');
+			} else {
+				console.log('Saved feed entry');
+			}
+		});
+		console.log('Saved Event');
+	}
 
 	/**
 	 * Returns all events for the user.
