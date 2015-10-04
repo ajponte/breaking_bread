@@ -4,6 +4,11 @@
 * @description overall template for the Breaking Bread app.
 */
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 /** Stylize the navigation bar at the top of the page */
 .navbar {
   	background: #8AC007;
@@ -83,7 +88,7 @@ p, small {
 }
 h1, h2, h3 {
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	color: purple;
+	color: black;
 }
 a, 
 a:visited,
@@ -194,6 +199,32 @@ hr {
 }
 .form-group-inline {
 	padding-top: 1em;
+}
+.user_profile_img {
+	max-width: 100px;
+	max-height: 100px;
+	border: 3px solid #8AC007;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; 
+	-khtml-border-radius: 10px;
+}
+.dashboard-content {
+	margin: auto;
+	margin-top: 5%;
+	margin-left: 5%;
+	padding: 1em;
+}
+.greenPanel {
+	margin: auto;
+    border: 3px solid #8AC007;
+  	background: #8AC007;
+  	background: rgba(138, 192, 7, .70);
+    padding: 10px;
+   	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; 
+	-khtml-border-radius: 10px;
 }
 
 
