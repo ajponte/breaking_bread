@@ -1,33 +1,53 @@
 <section class="row" data-ng-controller="AuthenticationController">
-	<h3 class="col-md-12 text-center">Sign in using your social accounts</h3>
-	<div class="col-md-12 text-center">
-		<a href="/auth/facebook" class="undecorated-link">
-			<img src="/modules/users/img/buttons/facebook.png">
-		</a>
-		<a href="/auth/twitter" class="undecorated-link">
-			<img src="/modules/users/img/buttons/twitter.png">
-		</a>
-		<a href="/auth/google" class="undecorated-link">
-			<img src="/modules/users/img/buttons/google.png">
-		</a>
-		<a href="/auth/linkedin" class="undecorated-link">
-			<img src="/modules/users/img/buttons/linkedin.png">
-		</a>
-		<a href="/auth/github" class="undecorated-link">
-			<img src="/modules/users/img/buttons/github.png">
-		</a>
-	</div>
-	<h3 class="col-md-12 text-center">Or with your account</h3>
+	<!-- Background image to scroll past -->
+	<section class="container feed-background">
+		<!-- Foreground form to scroll past background -->
+		<div class="col-md-6 formBox">
+			<h1 style="color:white;padding:.8em;">Sign In</h1>
+			<form name="userForm" data-ng-submit="signin()" class="signin form-inline" novalidate autocomplete="off">
+
+				<fieldset style="border:none">
+
+					<div class="form-group-inline">
+
+						<label for="username">Username&nbsp;</label>
+						<input type="text" id="username" name="username" class="form-control" data-ng-model="credentials.username"placeholder="Username">&nbsp;
+
+						<label for="password">Password&nbsp;</label>
+						<input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="Password">
+
+					</div>
+					<div class="text-center form-group-inline">
+						<button type="submit" class="btn btn-large btn-primary">Sign in</button>&nbsp; or&nbsp;
+						<a href="/#!/signup" class="show-signup">Sign up</a>
+					</div>
+
+					<div data-ng-show="error" class="text-center text-danger">
+						<strong data-ng-bind="error"></strong>
+					</div>
+
+					<div class "forgot-password">
+					<a href="/#!/password/forgot">Forgot your password?</a>
+				</div>
+				<div data-ng-show="error" class="text-center text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+				</fieldset>
+			</form>
+		</div>
+	</section>
+</section>
+<!--
 	<div class="col-xs-offset-2 col-xs-8 col-md-offset-5 col-md-2">
 		<form data-ng-submit="signin()" class="signin form-horizontal" autocomplete="off">
 			<fieldset>
 				<div class="form-group">
 					<label for="username">Username</label>
-					<input type="text" id="username" name="username" class="form-control" data-ng-model="credentials.username" placeholder="Username">
+					<input type="text" id="username" name="username" class="form-control" data-ng-model="credentials.username" placeholder="Username">&nbsp;
 				</div>
 				<div class="form-group">
 					<label for="password">Password</label>
-					<input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="Password">
+					<input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="Password">&nbsp;
 				</div>
 				<div class="text-center form-group">
 					<button type="submit" class="btn btn-primary">Sign in</button>&nbsp; or&nbsp;
@@ -42,4 +62,4 @@
 			</fieldset>
 		</form>
 	</div>
-</section>
+</section> -->

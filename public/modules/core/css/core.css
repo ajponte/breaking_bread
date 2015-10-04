@@ -6,8 +6,7 @@
 
 /** Stylize the navigation bar at the top of the page */
 .navbar {
-  	background: #35721b;
- 	background: rgba(53, 114, 27, 0.85);
+  	background: #8AC007;
  	box-shadow: none;
  	border: none;
  	vertical-align: center;
@@ -55,8 +54,7 @@
 
 /** Stylize the footer at the bottom of the page */
 .footer {
-  	background: #35721b;
- 	background: rgba(53, 114, 27, 0.85);
+  	background: #8AC007;
  	box-shadow: none;
  	border: none;
  	vertical-align: center;
@@ -85,21 +83,19 @@ p, small {
 }
 h1, h2, h3 {
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	color: #422100;
+	color: purple;
 }
 a, 
 a:visited,
 a:focus,
 a:active,
 a:hover {
-  color: #ff8013;
+  color: black;
+  font-weight: bold;
   text-decoration: none;
-  font-weight: normal;
 }
 .nameLink {
 	color: #35721b;
-	text-decoration: none;
-	font-weight: normal;
 }
 
 /** Login page */
@@ -118,7 +114,8 @@ a:hover {
 
 /** Form elements */
 .btn {
-	background: #ff5c54;
+	background: black;
+	color: white;
 	border: none;
 }
 .btn:hover,
@@ -180,6 +177,23 @@ hr {
 }
 .grow:hover { 
 	transform: scale(1.1); 
+}
+.formBox {
+	margin: auto;
+	margin-left: 20%;
+	margin-top: 10%;
+    width: 60%;
+    border: 3px solid #8AC007;
+  	background: #8AC007;
+  	background: rgba(138, 192, 7, .70);
+    padding: 10px;
+   	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; 
+	-khtml-border-radius: 10px;
+}
+.form-group-inline {
+	padding-top: 1em;
 }
 
 
