@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('events').controller('EventsController', ['$scope', '$http',
+angular.module('events').controller('DashboardController', ['$scope', '$http',
 	function($scope, $http) {
 		// Controller Logic
 		$scope.createEvent = function() {
