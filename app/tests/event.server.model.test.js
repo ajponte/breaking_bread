@@ -46,4 +46,11 @@ describe('Event Model Unit Tests', function() {
 			event1.save(done);
 		});
 	});
+    
+    after(function(done) { 
+		Event.remove().exec();
+		User.remove().exec();
+		
+		done();
+	});
 });
