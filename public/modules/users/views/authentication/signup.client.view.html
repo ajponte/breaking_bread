@@ -1,7 +1,7 @@
 <!--**************************************************************
     * signup.client.view.html
     * @author Karlina Beringer
-    * @description home page for the Breaking Bread app.
+    * @description Sign Up page for the Breaking Bread app.
     **************************************************************-->
 <section data-ng-controller="AuthenticationController" id="signup-section">
 	<div id="signup_page_background" class="slide header">
@@ -55,14 +55,13 @@
 				</div>
 			</fieldset>
 			<fieldset>
-								<div class="text-center form-group-inline">
-						<button type="submit" class="btn btn-large btn-primary">Sign up</button>&nbsp; or&nbsp;
+				<div class="text-center form-group-inline">
+					<button type="submit" class="btn btn-large btn-primary">Sign up</button>&nbsp; or&nbsp;
 						<a href="/#!/signin" class="show-signup">Sign in</a>
-					</div>
-
-					<div data-ng-show="error" class="text-center text-danger">
-						<strong data-ng-bind="error"></strong>
-					</div>
+				</div>
+				<div data-ng-show="error" class="text-center text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
 			</fieldset>
 		</form>
 	</div><!-- .slide -->
