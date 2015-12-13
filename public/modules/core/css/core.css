@@ -20,27 +20,28 @@ body {
   height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
-  /*font-family: "Trebuchet MS", Helvetica, sans-serif;*/
-  font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  line-height: 100%;
 }
 
 h1 {
-   font-size: 250%
+   font-size: 250%;
+   font-weight: bold;
 }
 
-p {
+p, span {
   font-size: 140%;
-  line-height: 150%;
+  line-height: 100%; 
   color: #333;
 }
 
 .slide {
-  position: relative;
-  padding: 25vh 10%;
-  min-height: 100vh;
-  width: 100vw;
-  box-sizing: border-box;
-  box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+  	position: relative;
+  	padding: 25vh 10%;
+  	min-height: 100vh;
+ 	width: 100vw;
+ 	box-sizing: border-box;
+ 	box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
 	transform-style: inherit;
 }
 
@@ -61,7 +62,6 @@ img:last-of-type {
   transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
 }
 
-
 .slide:before {
   content: "";
   position: absolute;
@@ -76,7 +76,6 @@ img:last-of-type {
   padding: 5%;
   border-radius: 5px;
   background: rgba(240,230,220, .7); 
-  /* box-shadow: 0 0 8px rgba(0, 0, 0, .7); */
 }
 
 .slide:nth-child(2n) .title {
@@ -99,9 +98,13 @@ img:last-of-type {
   color: #fff;
 }
 
-#title {
-   /* background-image: url("/modules/core/img/content/appetizer-salmon.jpg"); */
+#home_page_background {
    background-image: url("/modules/core/img/content/sandwhich.jpg");
+   background-attachment: fixed; 
+}
+
+#signup_page_background {
+   background-image: url("/modules/core/img/content/wood_planks.jpg"); 
    background-attachment: fixed; 
 }
 
@@ -201,12 +204,19 @@ p, small {
 	font-size: 14pt;
 	color: #523b4d;
 }
-h1, h2, h3, h4 {
+h1 {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+  	font-weight: bold;
+ 	/*color: #FF9900;*/
+ 	color: #009900;
+ 	/*text-shadow: 3px 3px black;*/
+ 	text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+}
+
+h2, h3, h4 {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
-  color: #4AA02C;
-  text-shadow: 3px 3px 1px white;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white;
+  font-weight: bold;
+  color: #009900;
 }
 
 
@@ -317,9 +327,19 @@ hr {
 	border-radius: 10px; 
 	-khtml-border-radius: 10px;
 }
-.form-group-inline {
+.form-group-inline, .fieldset {
 	padding-top: 1em;
+	border: none;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; 
+	-khtml-border-radius: 10px;
 }
+
+.formFields {
+	padding: 10px;
+}
+
 
 
 
