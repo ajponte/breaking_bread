@@ -2,11 +2,136 @@
 * core.css
 * @author Karlina Beringer
 * @description overall template for the Breaking Bread app.
+*
+* Theme Colors:
+* Spring Green = 4AA02C
 */
 
-/** Stylize the navigation bar at the top of the page */
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body { 
+  margin:0;
+  padding:0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  line-height: 100%;
+}
+
+h1 {
+   font-size: 250%;
+   font-weight: bold;
+}
+
+p, span {
+  font-size: 140%;
+  line-height: 100%; 
+  color: #333;
+}
+
+.slide {
+  	position: relative;
+  	padding: 25vh 10%;
+  	min-height: 100vh;
+ 	width: 100vw;
+ 	box-sizing: border-box;
+ 	box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+	transform-style: inherit;
+}
+
+img {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  width: 320px;
+  height: 240px;
+  transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+img:last-of-type {
+  transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
+}
+
+.slide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+}
+
+.title {
+  width: 50%;
+  padding: 5%;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7); 
+}
+
+.slide:nth-child(2n) .title {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.slide:nth-child(2n+1) .title {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.slide, .slide:before {
+  background: 50% 50% / cover;  
+}
+
+.header {
+  text-align: center;
+  font-size: 175%;
+  color: #fff;
+}
+
+#home_page_background {
+   background-image: url("/modules/core/img/content/sandwhich.jpg");
+   background-attachment: fixed; 
+}
+
+#signup_page_background {
+   background-image: url("/modules/core/img/content/wood_planks.jpg"); 
+   background-attachment: fixed; 
+}
+
+#slide1:before {
+  background-image: url("http://lorempixel.com/output/abstract-q-c-640-480-4.jpg");
+  transform: translateZ(-1px) scale(2);
+  z-index:-1;
+}
+
+#slide2 {
+  background-image: url("http://lorempixel.com/output/abstract-q-c-640-480-3.jpg");
+  background-attachment: fixed;
+}
+
+#slide3:before {
+  background-image: url("http://lorempixel.com/output/abstract-q-c-640-480-5.jpg");
+  transform: translateZ(-1px) scale(2);
+  z-index:-1;
+}
+
+#slide4 {
+  background: #222;
+}
+/* Don't bother with the stuff below for now */
+
 .navbar {
-  	background: #8AC007;
+  background: #4AA02C;
  	box-shadow: none;
  	border: none;
  	vertical-align: center;
@@ -19,14 +144,14 @@
 	font-size: 24pt;
 }
 .navbar .navbar-brand:hover {
-	color: #ffb715;
+	color: #C3FDB8;
 }
 .navbar .nav > li > a {
-	color: white;
+	color: white ;
 	font-size: 14pt;
 }
 .navbar .nav > li > a:hover {
-	color: #ffb715;
+	color: #C3FDB8;
 }
 .navbar .navbar-toggle, 
 .navbar .navbar-toggle:focus {
@@ -34,11 +159,11 @@
   background: none;
 }
 .navbar .navbar-toggle:hover {
-  border: 2px solid #ffb715;
+  border: 2px solid #C3FDB8;
   background: none;
 }
 .navbar .navbar-toggle:hover .icon-bar {
-	background: #ffb715;
+	background: #C3FDB8;
 }
 .navbar .navbar-toggle .icon-bar {
 	background: white;
@@ -51,10 +176,8 @@
     border-top: 2px solid white;
   }
 }
-
-/** Stylize the footer at the bottom of the page */
 .footer {
-  	background: #8AC007;
+  background: #4AA02C;
  	box-shadow: none;
  	border: none;
  	vertical-align: center;
@@ -65,13 +188,13 @@
  	padding: 1em;
 }
 #footer-link {
-	color: #422100;
+	color: white;
 	font-weight: bold;
 	text-decoration: none;
 }
 #footer-link:hover,
 #footer-link:focus {
-	color: #ffb715;
+	color: #C3FDB8;
 	font-weight: bold;
 }
 
@@ -81,10 +204,22 @@ p, small {
 	font-size: 14pt;
 	color: #523b4d;
 }
-h1, h2, h3 {
+h1 {
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	color: purple;
+  	font-weight: bold;
+ 	/*color: #FF9900;*/
+ 	color: #009900;
+ 	/*text-shadow: 3px 3px black;*/
+ 	text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
 }
+
+h2, h3, h4 {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: bold;
+  color: #009900;
+}
+
+
 a, 
 a:visited,
 a:focus,
@@ -115,7 +250,7 @@ a:hover {
 /** Form elements */
 .btn {
 	background: black;
-	color: white;
+	color: #D0D0D0;
 	border: none;
 }
 .btn:hover,
@@ -192,9 +327,19 @@ hr {
 	border-radius: 10px; 
 	-khtml-border-radius: 10px;
 }
-.form-group-inline {
+.form-group-inline, .fieldset {
 	padding-top: 1em;
+	border: none;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; 
+	-khtml-border-radius: 10px;
 }
+
+.formFields {
+	padding: 10px;
+}
+
 
 
 

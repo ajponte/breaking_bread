@@ -1,7 +1,47 @@
-<section class="row" data-ng-controller="AuthenticationController">
-	<!-- Background image to scroll past -->
+<!--**************************************************************
+    * signin.client.view.html
+    * @author Karlina Beringer
+    * @description Sign In page for the Breaking Bread app.
+    **************************************************************-->
+<section data-ng-controller="AuthenticationController" id="signin-section">
+	<div id="signup_page_background" class="slide header">
+		<h1>Welcome back! Please sign in.</h1>
+	</div>
+	<div class="slide">
+		<h2>Login</h2>
+		<form name="userForm" data-ng-submit="signin()" class="signin col-md-12 form-inline" novalidate autocomplete="off">
+			<fieldset>
+				<div class="col-md-4 formFields" id="username_field">
+					<p for="username">Username</p>
+					<p>
+						<input type="text" id="username" name="username" class="form-control" data-ng-model="credentials.username"placeholder="Username">
+					</p>
+				</div>
+				<div class="col-md-4 formFields" id="username_field">
+					<p for="password">Password</p>
+					<p>
+						<input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="Password">	
+					</p>
+				</div>
+			</fieldset>
+			<fieldset>
+				<div class="text-center form-group-inline">
+					<button type="submit" class="btn btn-large btn-primary">Sign in</button>&nbsp; or&nbsp;
+					<a href="/#!/signin" class="show-signup">Sign up</a>
+				</div>
+				<div data-ng-show="error" class="text-center text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+				<div class="forgot-password text-center">
+					<br>
+					<a href="/#!/password/forgot">Forgot your password?</a>
+				</div>
+			</fieldset>
+		</form>
+	</div><!-- .slide -->
+</section><!-- #signup-section --> 		
+<!--<section class="row" data-ng-controller="AuthenticationController">
 	<section class="container feed-background">
-		<!-- Foreground form to scroll past background -->
 		<div class="col-md-6 formBox">
 			<h1 style="color:white;padding:.8em;">Sign In</h1>
 			<form name="userForm" data-ng-submit="signin()" class="signin form-inline" novalidate autocomplete="off">
@@ -37,7 +77,6 @@
 		</div>
 	</section>
 </section>
-<!--
 	<div class="col-xs-offset-2 col-xs-8 col-md-offset-5 col-md-2">
 		<form data-ng-submit="signin()" class="signin form-horizontal" autocomplete="off">
 			<fieldset>
