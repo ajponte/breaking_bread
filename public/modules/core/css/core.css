@@ -8,6 +8,7 @@
 * 	3. Fonts
 *   4. Navbar & Footer
 * 	5. Forms
+*   6. Feed
 ******************************************************/
 
 /******************************************************
@@ -46,6 +47,7 @@ body {
  	box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
 	transform-style: inherit;
 }
+/*
 img {
   position: absolute;
   top: 50%;
@@ -79,7 +81,6 @@ img:last-of-type {
   margin-left: 0;
   margin-right: auto;
 }
-
 .slide:nth-child(2n+1) .title {
   margin-left: auto;
   margin-right: 0;
@@ -87,6 +88,7 @@ img:last-of-type {
 .slide, .slide:before {
   background: 50% 50% / cover;  
 }
+*/
 .grow { 
 	transition: all .2s ease-in-out; 
 }
@@ -253,6 +255,27 @@ a:hover {
  	font-family: "Trebuchet MS", Helvetica, sans-serif;
  	padding-left: 1em;
  	padding-right: 1em;
+}
+
+/***********************************************************************************
+* 6) Feed - the dashboard that shows who's bringing what food item to which event.
+************************************************************************************/
+.feedEntry {
+	font-size: 140%;
+	border: solid 3px #009900;
+	border-radius: 5px;
+	margin: 1em;
+}
+.profilePic {
+	border-radius: 25px;
+}
+.eventLink {
+	color: black;
+	text-decoration: underline;
+}
+.eventLink:hover,focus {
+	color: #009900;
+	text-decoration: underline;
 }
 
 
