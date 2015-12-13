@@ -1,10 +1,9 @@
 <!--**************************************************************
     * signin.client.view.html
-    * @author Karlina Beringer
     * @description Sign In page for the Breaking Bread app.
     **************************************************************-->
 <section data-ng-controller="AuthenticationController" id="signin-section">
-	<div id="signup_page_background" class="slide header">
+	<div id="home_page_background" class="slide header">
 		<h1>Welcome back! Please sign in.</h1>
 	</div>
 	<div class="slide">
@@ -40,65 +39,3 @@
 		</form>
 	</div><!-- .slide -->
 </section><!-- #signup-section --> 		
-<!--<section class="row" data-ng-controller="AuthenticationController">
-	<section class="container feed-background">
-		<div class="col-md-6 formBox">
-			<h1 style="color:white;padding:.8em;">Sign In</h1>
-			<form name="userForm" data-ng-submit="signin()" class="signin form-inline" novalidate autocomplete="off">
-
-				<fieldset style="border:none">
-
-					<div class="form-group-inline">
-
-						<label for="username">Username&nbsp;</label>
-						<input type="text" id="username" name="username" class="form-control" data-ng-model="credentials.username"placeholder="Username">&nbsp;
-
-						<label for="password">Password&nbsp;</label>
-						<input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="Password">
-
-					</div>
-					<div class="text-center form-group-inline">
-						<button type="submit" class="btn btn-large btn-primary">Sign in</button>&nbsp; or&nbsp;
-						<a href="/#!/signup" class="show-signup">Sign up</a>
-					</div>
-
-					<div data-ng-show="error" class="text-center text-danger">
-						<strong data-ng-bind="error"></strong>
-					</div>
-
-					<div class "forgot-password">
-					<a href="/#!/password/forgot">Forgot your password?</a>
-				</div>
-				<div data-ng-show="error" class="text-center text-danger">
-					<strong data-ng-bind="error"></strong>
-				</div>
-				</fieldset>
-			</form>
-		</div>
-	</section>
-</section>
-	<div class="col-xs-offset-2 col-xs-8 col-md-offset-5 col-md-2">
-		<form data-ng-submit="signin()" class="signin form-horizontal" autocomplete="off">
-			<fieldset>
-				<div class="form-group">
-					<label for="username">Username</label>
-					<input type="text" id="username" name="username" class="form-control" data-ng-model="credentials.username" placeholder="Username">&nbsp;
-				</div>
-				<div class="form-group">
-					<label for="password">Password</label>
-					<input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="Password">&nbsp;
-				</div>
-				<div class="text-center form-group">
-					<button type="submit" class="btn btn-primary">Sign in</button>&nbsp; or&nbsp;
-					<a href="/#!/signup">Sign up</a>
-				</div>
-				<div class "forgot-password">
-					<a href="/#!/password/forgot">Forgot your password?</a>
-				</div>
-				<div data-ng-show="error" class="text-center text-danger">
-					<strong data-ng-bind="error"></strong>
-				</div>
-			</fieldset>
-		</form>
-	</div>
-</section> -->
