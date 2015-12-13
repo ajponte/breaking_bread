@@ -76,7 +76,7 @@ img:last-of-type {
   padding: 5%;
   border-radius: 5px;
   background: rgba(240,230,220, .7); 
-  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+  /* box-shadow: 0 0 8px rgba(0, 0, 0, .7); */
 }
 
 .slide:nth-child(2n) .title {
@@ -97,7 +97,6 @@ img:last-of-type {
   text-align: center;
   font-size: 175%;
   color: #fff;
-  text-shadow: 0 2px 2px #000;
 }
 
 #title {
