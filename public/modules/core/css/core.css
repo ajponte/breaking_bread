@@ -1,12 +1,150 @@
-/** 
+/******************************************************
 * core.css
-* @author Karlina Beringer
-* @description overall template for the Breaking Bread app.
-*/
+* @description template styles the Breaking Bread app.
+* 
+*  	Table of Contents
+*  	1. Page Sections
+*	2. Parallax Scrolling
+* 	3. Fonts
+*   4. Navbar & Footer
+* 	5. Forms
+*   6. Feed
+******************************************************/
 
-/** Stylize the navigation bar at the top of the page */
+/******************************************************
+* 1) Page Sections - Overall page layout
+******************************************************/
+html {
+  height: 100%;
+  overflow: hidden;
+}
+body { 
+  margin:0;
+  padding:0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  line-height: 100%;
+}
+.container {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+/*************************************************************
+* 2) Parallax Scrolling - Foreground slides past background.
+**************************************************************/
+.slide {
+  	position: relative;
+  	padding: 25vh 10%;
+  	min-height: 100vh;
+ 	width: 100vw;
+ 	box-sizing: border-box;
+ 	box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+	transform-style: inherit;
+}
+/*
+img {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  width: 320px;
+  height: 240px;
+  transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+img:last-of-type {
+  transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
+}
+.slide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+}
+.title {
+  width: 50%;
+  padding: 5%;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7); 
+}
+.slide:nth-child(2n) .title {
+  margin-left: 0;
+  margin-right: auto;
+}
+.slide:nth-child(2n+1) .title {
+  margin-left: auto;
+  margin-right: 0;
+}
+.slide, .slide:before {
+  background: 50% 50% / cover;  
+}
+*/
+.grow { 
+	transition: all .2s ease-in-out; 
+}
+.grow:hover { 
+	transform: scale(1.1); 
+}
+.header {
+  text-align: center;
+  font-size: 175%;
+  color: #fff;
+}
+#home_page_background {
+   background-image: url("/modules/core/img/content/sandwhich.jpg");
+   background-attachment: fixed; 
+}
+#signup_page_background {
+   background-image: url("/modules/core/img/content/wood_planks.jpg"); 
+   background-attachment: fixed; 
+}
+
+/******************************************************
+* 3) Fonts - Headers, body text, links, etc.
+******************************************************/
+h1 {
+   font-size: 250%;
+   font-weight: bold;
+   font-family: "Trebuchet MS", Helvetica, sans-serif;
+   font-weight: bold;
+   color: #009900;
+   text-shadow: 2px 2px 2px black, 0 0 25px black, 0 0 5px black;
+}
+h2, h3, h4 {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: bold;
+  color: #009900;
+}
+p, span {
+  font-size: 140%;
+  line-height: 100%; 
+  color: #333;
+}
+a, 
+a:visited,
+a:focus,
+a:active,
+a:hover {
+  color: #ff6600;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/*******************************************************************
+* 4) Navbar & Footer - Green bar at the top and bottom of the page.
+********************************************************************/
 .navbar {
-  	background: #8AC007;
+	background: #009900;;
  	box-shadow: none;
  	border: none;
  	vertical-align: center;
@@ -19,26 +157,26 @@
 	font-size: 24pt;
 }
 .navbar .navbar-brand:hover {
-	color: #ffb715;
+	color: #ffb399;
 }
 .navbar .nav > li > a {
-	color: white;
+	color: white ;
 	font-size: 14pt;
 }
 .navbar .nav > li > a:hover {
-	color: #ffb715;
+	color: #ffb399;
 }
 .navbar .navbar-toggle, 
 .navbar .navbar-toggle:focus {
   border: 2px solid white;
-  background: none;
+  background: #ff6600;
 }
 .navbar .navbar-toggle:hover {
-  border: 2px solid #ffb715;
+  border: 2px solid #C3FDB8;
   background: none;
 }
 .navbar .navbar-toggle:hover .icon-bar {
-	background: #ffb715;
+	background: #C3FDB8;
 }
 .navbar .navbar-toggle .icon-bar {
 	background: white;
@@ -51,10 +189,8 @@
     border-top: 2px solid white;
   }
 }
-
-/** Stylize the footer at the bottom of the page */
 .footer {
-  	background: #8AC007;
+  	background: #009900;
  	box-shadow: none;
  	border: none;
  	vertical-align: center;
@@ -65,136 +201,85 @@
  	padding: 1em;
 }
 #footer-link {
-	color: #422100;
+	color: #ffb399;
 	font-weight: bold;
 	text-decoration: none;
 }
 #footer-link:hover,
 #footer-link:focus {
-	color: #ffb715;
+	color: #C3FDB8;
 	font-weight: bold;
 }
 
-/** Control the body fonts */
-p, small {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14pt;
-	color: #523b4d;
-}
-h1, h2, h3 {
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	color: purple;
-}
-a, 
-a:visited,
-a:focus,
-a:active,
-a:hover {
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-}
-.nameLink {
-	color: #35721b;
-}
-
-/** Login page */
-.welcome {
-	padding: 1em;
-	background: #ff8013;
-	color: #422100
-}
-
-/** Paralax effect (scrolling past background image) */
-.container {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-}
-
-/** Form elements */
+/******************************************************
+* 5) Forms - input fields, buttons, dropdowns, etc.
+******************************************************/
 .btn {
-	background: black;
+	background: #009900;
 	color: white;
 	border: none;
 }
 .btn:hover,
 .btn:focus {
-	background: #ff8013;
+	background: #ff6600;
 	border: none;
 }
-
-/** Media */
-hr {
-  background-color: #ff8013;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #ff8013;
-}
-.img-responsive {
-  width: 100%;
-}
-.user-image {
-  width: 100px;
-  height: 100px;
-  border: 10px solid #ecab18;
-  border-right-color: #1ad280;
-  border-bottom-color: #1ad280;
-  border-radius: 50%;
-  margin-bottom: .5em;
-}
-.scrollBox {
-	padding: 1em;
-	margin-top: 55px;
-	overflow: scroll;
-	max-height: 445px;
-}
-.feed-entry {
+.form-group-inline, .fieldset {
+	padding-top: 1em;
+	border: none;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px; 
 	-khtml-border-radius: 10px;
-	background: rgba(184, 179, 180, 0.85);
-	padding: 1em;
+}
+.formFields {
+	padding: 10px;
+}
+.dropdown, .dropdown-toggle, .dropdown-menu, .dropdown-menu:focus {
+	background: #009900;
+	color: white;
+	box-shadow: none;
+ 	border: none;
+ 	vertical-align: center;
+ 	font-family: "Trebuchet MS", Helvetica, sans-serif;
+ 	padding-left: 1em;
+ 	padding-right: 1em;
+ 	font-size: 14pt;
+}
+.dropdown_link:hover, .dropdown_link:focus {
+	background: #009900;
+	color: white;
+	box-shadow: none;
+ 	border: none;
+ 	vertical-align: center;
+ 	font-family: "Trebuchet MS", Helvetica, sans-serif;
+ 	padding-left: 1em;
+ 	padding-right: 1em;
+}
+
+/***********************************************************************************
+* 6) Feed - the dashboard that shows who's bringing what food item to which event.
+************************************************************************************/
+.feedEntry {
+	font-size: 140%;
+	border: solid 3px #009900;
+	border-radius: 5px;
 	margin: 1em;
 }
-.feed-entry:hover {
-	background: #ff5c54;
-	background: rgba(255, 92, 84, 0.85);
+.profilePic {
+	border-radius: 25px;
 }
-.feed-background {        
-    position:relative;
-    z-index:1;
-    height:500px;
-    width:100%;
-    background-attachment:fixed;    
-    background-size:100% 100%;
-    background-repeat:no-repeat;
-    background-image: url("/modules/core/img/content/wood.jpg");
+.eventLink {
+	color: black;
+	text-decoration: underline;
 }
-.grow { 
-	transition: all .2s ease-in-out; 
+.eventLink:hover,focus {
+	color: #009900;
+	text-decoration: underline;
 }
-.grow:hover { 
-	transform: scale(1.1); 
-}
-.formBox {
-	margin: auto;
-	margin-left: 20%;
-	margin-top: 10%;
-    width: 60%;
-    border: 3px solid #8AC007;
-  	background: #8AC007;
-  	background: rgba(138, 192, 7, .70);
-    padding: 10px;
-   	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px; 
-	-khtml-border-radius: 10px;
-}
-.form-group-inline {
-	padding-top: 1em;
-}
+
+
+
 
 
 
