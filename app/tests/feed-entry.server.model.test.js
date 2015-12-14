@@ -17,7 +17,7 @@ var user, event, feedEntry;
 /**
  * Unit tests
  */
-describe('Feed entry Model Unit Tests:', function() {
+describe('Feed Entry Model Unit Tests:', function() {
 	beforeEach(function(done) {
 		user = new User({
 			firstName: 'Full',
